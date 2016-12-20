@@ -22,7 +22,7 @@ exclude:
 defaults:
   -
     scope:
-      path: ""
+      path: "analytics"
       type: agencies
     values:
       layout: default
@@ -41,6 +41,7 @@ description: "Analytics data for Cook County. This is an alpha version."
 
 # Site's own URL
 url: http://opendocs.cookcountyil.gov/analytics/
+baseurl: /analytics
 
 # Default dropdown title, will not appear if there are no sub-pages
 dropdown_title: All Participating Websites
