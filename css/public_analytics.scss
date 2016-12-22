@@ -37,6 +37,11 @@ $mobile-small-screen:  new-breakpoint(max-width  500px   1);
 
 // Fonts & Colors:
 
+$cook-navigation-background: #0a4d94;
+$cook-navigation-border-bottom: #235f9f;
+$cook-hero-background: #1390a0;
+$cook-navigation-menu-wrapper: #08417c;
+
 $red: #981b1e;
 $light-blue: #0071bc;
 $dark-blue: #112e51;
@@ -48,14 +53,14 @@ $white: #fff;
 
 $background-color: $light-gray;
 $container-background: $white;
-$data: $light-blue;
+$data: $cook-navigation-border-bottom;
 
 $border-width: 1px;
 $border-radius: 5px;
 
 $bold-weight: 600;
 
-$font-sans:           "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$font-sans:           "Open Sans", sans-serif;
 $lead-font-size:      rem(20px);
 $title-font-size:     rem(59px);
 $h1-font-size:        rem(44px);
@@ -194,9 +199,9 @@ ul li:before {
 */
 
 header {
-  background: $dark-blue;
+  background: $cook-navigation-background;
   color: $white;
-  border-bottom: 6px solid $light-blue;
+  border-bottom: solid 6px $cook-navigation-border-bottom;
 
   .inner {
     padding: 2.5rem;
@@ -225,7 +230,7 @@ header {
     text-decoration: none;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: $white;
   }
   a:visited {
@@ -319,7 +324,7 @@ header #agency-selector {
   background-image: url('../css/img/arrow-down.png');
   background-image: url('../css/img/arrow-down.svg');
   color: $white;
-  background-color: $dark-blue;
+  background-color: $cook-navigation-menu-wrapper;
   border: 1px solid $white;
 }
 
