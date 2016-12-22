@@ -33,7 +33,7 @@
           data-source="{{ site.data_url }}/{{ data_prefix }}/realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
-          <div class="chart_subtitle">people on {{ entity }} pages now</div>
+          <div class="chart_subtitle">people on {{ entity }} pages now*</div>
         </section>
 
         <section class="section_headline visits_today">
@@ -118,7 +118,7 @@
         <div style="clear: both"></div>
 
         <section class="section_headline">
-          <h3>Visitor Locations Right Now</h3>
+          <h3>Visitor Locations Right Now*</h3>
         </section>
 
         <section id="cities" class="three_column"
@@ -168,7 +168,7 @@
             data-source="{{ site.data_url }}/{{ data_prefix }}/top-pages-realtime.json"
             data-refresh="15">
             <h5><em>
-              People on a <strong>single, specific page</strong> now. {% if entity == "government" %}We only count pages with at least 10 people on the page.{% endif %}
+              People on a <strong>single, specific page</strong> now*. {% if entity == "government" %}We only count pages with at least 10 people on the page.{% endif %}
               <a href="{{ site.data_url }}/{{ data_prefix }}/all-pages-realtime.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
