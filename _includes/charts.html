@@ -8,7 +8,7 @@
       {% assign data_prefix = page.slug %}
     {% endif %}
 
-    {% assign entity = "agency" %}
+    {% assign entity = page.name %}
   {% endif %}
     <!--
       JavaScript block hooks look for any element with both data-block and
@@ -33,7 +33,7 @@
           data-source="{{ site.data_url }}/{{ data_prefix }}/realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
-          <div class="chart_subtitle">people on {{ entity }} websites now</div>
+          <div class="chart_subtitle">people on {{ entity }} pages now</div>
         </section>
 
         <section class="section_headline visits_today">
