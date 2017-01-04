@@ -44,13 +44,13 @@ url: http://opendocs.cookcountyil.gov/analytics/
 baseurl: /analytics
 
 # Default dropdown title, will not appear if there are no sub-pages
-dropdown_title: All Participating Websites
+dropdown_title: Cook County Website
 
 # Default data url (also needs to be in nginx.conf for cloud.gov deployment)
-data_url: http://opendocs.cookcountyil.gov/analytics/data
+data_url: http://opendocs.cookcountyil.gov/analytics/cookcountyilgov/data
 
 # twitter information
-twitter: usgsa
+twitter: cookcountytech
 
 sass:
   sass_dir: sass
