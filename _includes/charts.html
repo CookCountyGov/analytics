@@ -1,6 +1,6 @@
   {% if page.url == '/' %}
-    {% assign data_prefix = 'live' %}
-    {% assign entity = "government" %}
+    <!-- {% assign data_prefix = 'live' %} -->
+    <!-- {% assign entity = "government" %} -->
   {% else %}
     {% if page.data %}
       {% assign data_prefix = page.data %}
@@ -177,18 +177,18 @@
 
           <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
             data-block="top-pages"
-            data-source="{{ site.data_url }}/{{ data_prefix }}/top-domains-7-days.json">
-            <h5><em>Visits over the last week to <strong>domains</strong>, including traffic to all pages within that domain.</em></h5>
+            data-source="{{ site.data_url }}/{{ data_prefix }}/top-pages-7-days.json">
+            <h5><em>Most active pages over the past week, ranked by number of page visits.</em></h5>
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
             data-block="top-pages"
-            data-source="{{ site.data_url }}/{{ data_prefix }}/top-domains-30-days.json">
+            data-source="{{ site.data_url }}/{{ data_prefix }}/top-pages-30-days.json">
             <h5><em>
-              Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain. {% if entity == "government" %}We only count pages with at least 1,000 visits in the last month.{% endif %}
-              <a href="{{ site.data_url }}/{{ data_prefix }}/top-domains-30-days.csv">Download the full dataset.</a>
+              Most active pages over the last 30 days, ranked by number of page visits. {% if entity == "government" %}We only count pages with at least 1,000 visits in the last month.{% endif %}
+              <a href="{{ site.data_url }}/{{ data_prefix }}/top-pages-30-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
             </div>
