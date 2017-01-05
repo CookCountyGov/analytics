@@ -47,7 +47,7 @@ baseurl: /analytics
 dropdown_title: Cook County Website
 
 # Default data url (also needs to be in nginx.conf for cloud.gov deployment)
-data_url: http://opendocs.cookcountyil.gov/analytics/cookcountyilgov/data
+data_url: http://opendocs.cookcountyil.gov/analytics/data
 
 # twitter information
 twitter: cookcountytech
