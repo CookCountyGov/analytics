@@ -114,18 +114,27 @@
         <div style="clear: both"></div>
 
         <section class="section_headline">
-          <h3>Visitor Locations Right Now*</h3>
+          <h3>Cities</h3>
         </section>
 
-        <section id="cities" class="three_column"
-          data-block="cities"
+        <section id="cities-realtime" class="three_column">
+          <h4>Visitor Locations Right Now*</h4>
+          <figure id="chart_top-cities-realtime" data-block="cities-realtime"
           data-source="{{ site.data_url }}/{{ data_prefix }}/top-cities-realtime.json">
-          <h4>Cities</h4>
-          <figure id="chart_top-cities-90-days">
             <div class="data bar-chart">
             </div>
           </figure>
         </section>
+         
+        <section id="cities-90-days" class="three_column">
+            <figure id="chart_top-cities-90-days" data-block="cities"
+          data-source="{{ site.data_url }}/{{ data_prefix }}/top-cities-90-days.json">
+            <h4>Visitor Locations over the last 90 days.</h4>
+            <div class="data bar-chart">
+            </div>
+          </figure>
+        </section>
+        
 
        <!--  <section id="countries" class="three_column">
           <h4>Countries</h4>

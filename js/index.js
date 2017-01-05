@@ -201,7 +201,7 @@
           .format(formatPercent)
       ),
 
-    "cities": renderBlock()
+    "cities-realtime": renderBlock()
       .transform(function(d) {
         // remove "(not set) from the data"
         var city_list = d.data;
@@ -209,6 +209,23 @@
           return (c.city != "(not set)") && (c.city != "zz");
         });
         city_list_filtered = addShares(city_list_filtered, function(d){return d.active_visitors;});
+        return city_list_filtered.slice(0, 10);
+      })
+      .render(
+        barChart()
+          .value(function(d) { return d.share * 100; })
+          .label(function(d) { return d.city; })
+          .format(formatPercent)
+      ),
+      
+      "cities": renderBlock()
+      .transform(function(d) {
+        // remove "(not set) from the data"
+        var city_list = d.data;
+        var city_list_filtered = city_list.filter(function (c) {
+          return (c.city != "(not set)") && (c.city != "zz");
+        });
+        city_list_filtered = addShares(city_list_filtered, function(d){return d.visits;});
         return city_list_filtered.slice(0, 10);
       })
       .render(
