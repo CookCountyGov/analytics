@@ -294,15 +294,18 @@
           .html("")
           .append("a")
             .attr("target", "_blank")
+            .attr("title", function(d) {
+              return d.page_title;
+            })
             .attr("href", function(d) {
-              return exceptions[d.domain] || ("http://" + d.domain);
+              return exceptions[d.page] || ("http://" + d.page);
             })
             .text(function(d) {
-              return title_exceptions[d.domain] || d.domain;
+              return title_exceptions[d.page] || d.page_title;
             });
       })
       .render(barChart()
-        .label(function(d) { return d.domain; })
+        .label(function(d) { return d.page_title; })
         .value(function(d) { return +d.visits; })
         .scale(function(values) {
           var max = d3.max(values);
