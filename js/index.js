@@ -72,12 +72,15 @@
         //find & remove protocol (http, ftp, etc.) and get domain
         if (url.indexOf("://") > -1) {
           domain = url.split("/")[2];
+          console.log("if Domain = " + domain);
         }
         else {
           domain = url.split("/")[0];
+          console.log("else Domain = " + domain);
         }
         //find & remove port number
         domain = domain.split(":")[0];
+        console.log("almost final Domain = " + domain);
         return domain.replace(new RegExp("%20", "g"), " ");
       },
       formatFile = function(url) {
@@ -281,10 +284,10 @@
           .value(function(d) { return +d.total_events; })
           .label(function(d) {
             return [
-              '<span class="name"><a class="top-download-page" target="_blank" href=http://', d.page, '>', d.page_title, '</a></span> ',
+              '<span class="name"><a class="top-download-page" target="_blank" href=http://', d.domain, d.page, '>', d.page_title, '</a></span> ',
               '<span class="domain" >', formatURL(d.page), '</span> ',
               '<span class="divider">/</span> ',
-              '<span class="filename"><a class="top-download-file" target="_blank" href=', d.event_label, '>',
+              '<span class="filename"><a class="top-download-file" target="_blank" href=http://', d.domain, d.event_label, '>',
               formatFile(d.event_label), '</a></span>'
             ].join('');
           })
@@ -315,7 +318,7 @@
               return d.page_title;
             })
             .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.page);
+              return exceptions[d.page] || ("http://" + d.domain + d.page);
             })
             .text(function(d) {
               return title_exceptions[d.page] || d.page_title;
@@ -350,7 +353,7 @@
               return d.page_title;
             })
             .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.page);
+              return exceptions[d.page] || ("http://" + d.domain + d.page);
             })
             .text(function(d) {
               return title_exceptions[d.page] || d.page_title;
