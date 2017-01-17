@@ -22,7 +22,7 @@ exclude:
 defaults:
   -
     scope:
-      path: "analytics"
+      path: ""
       type: agencies
     values:
       layout: default
@@ -40,14 +40,15 @@ title: "Cook County Analytics | Cook County web traffic."
 description: "Analytics data for Cook County. This is an alpha version."
 
 # Site's own URL
-url: http://opendocs.cookcountyil.gov/analytics/
-baseurl: /analytics
+url: http://analytics.cookcountyil.gov.s3-website-us-east-1.amazonaws.com
 
 # Default dropdown title, will not appear if there are no sub-pages
 dropdown_title: Cook County Website
 
 # Default data url (also needs to be in nginx.conf for cloud.gov deployment)
-data_url: http://opendocs.cookcountyil.gov/analytics/data
+data_url: http://analytics.cookcountyil.gov.s3-website-us-east-1.amazonaws.com/data
+
+
 
 # twitter information
 twitter: cookcountytech
