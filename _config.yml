@@ -17,6 +17,11 @@ exclude:
 - requirements.txt
 - system-security-plan.yml
 - manifest.yml
+- vendor
+- .codeclimate.yml
+- .eslinrc.yml
+- bin/
+- docs/
 
 # defaults
 defaults:
@@ -50,6 +55,12 @@ data_url: https://analytics.usa.gov/data
 
 # twitter information
 twitter: usgsa
+
+# Site wide error message
+site_wide_error:
+  display: false
+  title: "Error message title here"
+  body: "Put the error message body here"
 
 sass:
   sass_dir: sass
