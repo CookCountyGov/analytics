@@ -432,8 +432,13 @@ section {
   }
 }
 
-#devices p {
-  font-size: 1.3rem;
+#devices {
+  p {
+    font-size: 1.3rem;
+  }
+  .label::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .downloads {
@@ -722,6 +727,10 @@ g.axis {
     fill: $dark-gray;
     font-size: 1.1rem;
   }
+}
+
+#site-wide-alert {
+  margin-top: 0;
 }
 
 // nested charts

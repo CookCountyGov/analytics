@@ -9,6 +9,7 @@
   {% include head.html %}
 
   <body>
+    {% include gtm_iframe.html %}
     <header>
         <div class="inner clearfix">
             <h1>
@@ -44,6 +45,8 @@
         </div>
     </header>
     <div class="container">
+
+      {% include error.html %}
 
       {{ content }}
 
