@@ -22,6 +22,10 @@ exclude:
 - .eslinrc.yml
 - bin/
 - docs/
+- Dockerfile
+- Dockerfile.production
+- docker-compose.yml
+- make.ps1
 
 # defaults
 defaults:
